@@ -125,9 +125,9 @@
                 <v-spacer></v-spacer>
 
                 <v-btn class="ms-2" prepend-icon="mdi-close" size="small" text="DISAGREE" color="blue-grey-darken-3"
-                    variant="outlined"></v-btn>
+                    variant="outlined" @click="localTermsAndConditions = false; $emit('validate', false)"></v-btn>
                 <v-btn class="ms-2" prepend-icon="mdi-check" size="small" text="AGREE" color="blue-grey-darken-3"
-                    variant="flat" ></v-btn>
+                    variant="flat"  @click="localTermsAndConditions = false; $emit('validate', true)"></v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
@@ -143,7 +143,6 @@ export default {
         }
     },
     mounted() {
-        console.log("llega")
         this.localTermsAndConditions = this.termsAndConditions;
     }
 

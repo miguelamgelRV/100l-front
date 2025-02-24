@@ -94,8 +94,6 @@ export default {
         async validateTransaction(brickId) {
             await this.addBrickInCart(brickId)
                 .then((response) => {
-
-                    console.log(response)
                     if (response?.datos?.id) {
                         this.alertMessage = "Added successfully";
                         this.alertType = "success"
